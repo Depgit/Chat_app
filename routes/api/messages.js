@@ -46,7 +46,7 @@ router.get('/global', (req, res) => {
                 console.log(err);
                 res.setHeader('Content-Type', 'application/json');
                 res.end(JSON.stringify({ message: 'Failure' }));
-                res.sendStatus(500);
+                res.sendStatus(500);    
             } else {
                 res.send(messages);
             }

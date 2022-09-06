@@ -4,7 +4,7 @@ module.exports = function validateLoginInput(data) {
     let errors = {};
 
     // Converts empty fields to String in order to validate them
-    data.username = !isEmpty(data.username) ? data.username : '';
+    data.username =  !isEmpty(data.username) ? data.username : '';
     data.password = !isEmpty(data.password) ? data.password : '';
 
     if (Validator.isEmpty(data.username)) {
