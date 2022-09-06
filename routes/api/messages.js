@@ -88,6 +88,7 @@ router.get('/conversations', (req, res) => {
             },
         },
     ])
+        /* Matching the `recipients` array to see if it contains the `from` user. */
         .match({ recipients: { $all: [{ $elemMatch: { $eq: from } }] } })
         .project({
             'recipientObj.password': 0,
